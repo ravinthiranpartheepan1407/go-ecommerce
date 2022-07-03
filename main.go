@@ -3,5 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Go_Ecommerce Backend")
+	err := godotenv.Load(".env")
+	if err != nil{
+		fmt.Println("Failed to load env")
+	}
 }
