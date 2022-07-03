@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  go-ecommerce:
+    build: 
+      context: "./../go-ecommerce"
+      dockerfile: ./../go-ecommerce/go-ecommerce.dockerfile
+    restart: always
+    ports:
+      - "8080:80"
+    deploy:
+      mode: replicated
+      replicas: 1
