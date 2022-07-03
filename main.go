@@ -4,8 +4,6 @@ import "fmt"
 
 import "github.com/joho/godotenv"
 
-import "github.com/ravinthiranpartheepan1407/go-ecommerce"
-
 
 func main() {
 	err := godotenv.Load(".env")
@@ -13,5 +11,8 @@ func main() {
 		fmt.Println("Failed to load env")
 	}
 
-	connection.GetDB()
+	 if GetDBInstance() != nil{
+		fmt.Println("Database Connection Success")
+	 }
+
 }
